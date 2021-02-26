@@ -9,7 +9,7 @@ spec:
   type: NodePort
   ports:
   - name: webapps
-    port: 
+    port: 80
     targetPort: 
     protocol: TCP
     nodePort: 30080
