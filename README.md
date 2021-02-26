@@ -47,4 +47,4 @@ Events:
   Normal  ScalingReplicaSet  70s   deployment-controller  Scaled up replica set webapp01-6b8f85d6cc to 1
 
 
-$ kubectl create -f service.yaml
+$ kubectl create or apply -f service.yaml
