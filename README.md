@@ -47,4 +47,32 @@ Events:
   Normal  ScalingReplicaSet  70s   deployment-controller  Scaled up replica set webapp01-6b8f85d6cc to 1
 
 
-$ kubectl create or apply -f service.yaml
+automationmgr@master1:~/workbench/kubenetesbench/kubenetes-k8s-lab02$ kubectl apply -f service.yaml 
+service/webapps-svc created
+
+automationmgr@master1:~/workbench/kubenetesbench/kubenetes-k8s-lab02$ kubectl get svc webapps-svc -o wide
+NAME          TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE   SELECTOR
+webapps-svc   NodePort   10.110.137.247   <none>        80:30080/TCP   94s   app=webapps
+automationmgr@master1:~/workbench/kubenetesbench/kubenetes-k8s-lab02$ 
+
+
+automationmgr@master1:~/workbench/kubenetesbench/kubenetes-k8s-lab02$ kubectl describe svc webapps-svc
+Name:                     webapps-svc
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 app=webapps
+Type:                     NodePort
+IP Families:              <none>
+IP:                       10.110.137.247
+IPs:                      10.110.137.247
+Port:                     webapps  80/TCP
+TargetPort:               80/TCP
+NodePort:                 webapps  30080/TCP
+Endpoints:                10.244.104.12:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+automationmgr@master1:~/workbench/kubenetesbench/kubenetes-k8s-lab02$ 
+
+$ curl node2:30080
