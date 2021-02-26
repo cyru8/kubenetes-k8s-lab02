@@ -76,3 +76,21 @@ Events:                   <none>
 automationmgr@master1:~/workbench/kubenetesbench/kubenetes-k8s-lab02$ 
 
 $ curl node2:30080
+
+
+automationmgr@master1:~/workbench/kubenetesbench/kubenetes-k8s-lab02$ kubectl get pods
+NAME                        READY   STATUS              RESTARTS   AGE
+webapp01-6b8f85d6cc-57hhn   0/1     ContainerCreating   0          16s
+webapp01-6b8f85d6cc-7wz5r   0/1     ContainerCreating   0          16s
+webapp01-6b8f85d6cc-fc2qq   1/1     Running             0          23m
+webapp01-6b8f85d6cc-jrn9n   0/1     ContainerCreating   0          16s
+automationmgr@master1:~/workbench/kubenetesbench/kubenetes-k8s-lab02$ 
+
+
+utomationmgr@master1:~/workbench/kubenetesbench/kubenetes-k8s-lab02$ kubectl get pods -o wide
+NAME                        READY   STATUS              RESTARTS   AGE   IP              NODE    NOMINATED NODE   READINESS GATES
+webapp01-6b8f85d6cc-57hhn   1/1     Running             0          37s   10.244.104.13   node2   <none>           <none>
+webapp01-6b8f85d6cc-7wz5r   1/1     Running             0          37s   10.244.104.14   node2   <none>           <none>
+webapp01-6b8f85d6cc-fc2qq   1/1     Running             0          23m   10.244.104.12   node2   <none>           <none>
+webapp01-6b8f85d6cc-jrn9n   0/1     ContainerCreating   0          37s   <none>          node1   <none>           <none>
+automationmgr@master1:~/workbench/kubenetesbench/kubenetes-k8s-lab02$ 
