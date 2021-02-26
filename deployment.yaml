@@ -1,5 +1,4 @@
 apiVersion: app/v1
-kind: apiVersion: apps/v1
 kind: Deployment
 metadata:
   name:  webapp01
