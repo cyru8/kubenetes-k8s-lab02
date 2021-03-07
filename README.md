@@ -94,3 +94,4 @@ webapp01-6b8f85d6cc-7wz5r   1/1     Running             0          37s   10.244.
 webapp01-6b8f85d6cc-fc2qq   1/1     Running             0          23m   10.244.104.12   node2   <none>           <none>
 webapp01-6b8f85d6cc-jrn9n   0/1     ContainerCreating   0          37s   <none>          node1   <none>           <none>
 automationmgr@master1:~/workbench/kubenetesbench/kubenetes-k8s-lab02$ 
+# kubernetes-k8s-lab18-igp-voting-app
